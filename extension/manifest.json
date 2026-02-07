@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Continuum",
+  "version": "1.0",
+  "description": "A study tool with goals, timers, tab reminders, and a chatbot.",
+  "permissions": ["tabs", "storage", "notifications"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "StudyFocus"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
