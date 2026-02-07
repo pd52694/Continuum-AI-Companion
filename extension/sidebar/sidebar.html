@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial; width: 250px; padding: 10px; }
+    #chatbox { border: 1px solid #ccc; padding: 5px; height: 120px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <h3>StudyFocus</h3>
+
+  <label>Study Goal:</label>
+  <input id="goal" type="text" style="width:100%">
+
+  <label>Minutes:</label>
+  <input id="minutes" type="number" min="1" value="25" style="width:100%">
+
+  <button id="start">Start Session</button>
+  <button id="stop">Stop</button>
+
+  <h4>Chatbot</h4>
+  <div id="chatbox"></div>
+  <input id="chatInput" type="text" placeholder="Ask something..." style="width:100%">
+  <button id="send">Send</button>
+
+  <script src="popup.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
