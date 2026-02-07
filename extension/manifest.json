@@ -2,19 +2,25 @@
   "manifest_version": 3,
   "name": "Continuum",
   "version": "1.0",
-  "description": "A study tool with goals, timers, tab reminders, and a chatbot.",
-  "permissions": ["tabs", "storage", "notifications"],
+  "description": "A study tool with goals, timers, tab reminders",
+
+  "permissions": ["storage", "notifications", "scripting", "activeTab"],
+  "host_permissions": ["https://*.google.com/*","<all_urls>"],
+
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background/background.js",
+    "type": "module"
   },
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "StudyFocus"
-  },
-  "content_scripts": [
+
+  "web_accessible_resources": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "resources": ["sidebar/sidebar.html", "sidebar/sidebar.js"],
+      "matches": ["<all_urls>"]
     }
-  ]
+  ],
+
+  "action": {
+    "default_title": "Continuum (Click to toggle sidebar)"
+  }
 }
+

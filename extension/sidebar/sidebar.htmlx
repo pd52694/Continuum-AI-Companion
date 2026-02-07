@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+  <body style="font-family: system-ui; padding: 12px;">
+    <h3>Continuum</h3>
+    <div id="status">Waiting for context…</div>
+
+    <script src="sidebar.js"></script>
+  </body>
+</html>
+
